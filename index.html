@@ -3,10 +3,254 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi proyecto Bootstrap</title>
+    <meta name="description" content="Archivo interactivo de Mägo de Oz: discografía, canciones, historia y agenda oficial." />
+    <meta name="theme-color" content="#faf9f6" />
+    <title>Oz Archivo | Explora Mägo de Oz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <body data-theme="light">
+    <header id="descubrir">
+      <nav class="navbar navbar-expand-lg site-nav" aria-label="Navegación principal">
+        <div class="container">
+          <a class="brand-lockup" href="#descubrir" aria-label="Oz Archivo, inicio">
+            <span class="brand-seal" aria-hidden="true">OZ</span><span>Oz Archivo</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavMenu" aria-controls="siteNavMenu" aria-expanded="false" aria-label="Abrir navegación">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="siteNavMenu">
+            <ul class="navbar-nav mx-lg-auto gap-lg-3">
+              <li class="nav-item"><a class="nav-link" href="#discografia">Discografía</a></li>
+              <li class="nav-item"><a class="nav-link" href="#canciones">Canciones</a></li>
+              <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+              <li class="nav-item"><a class="nav-link" href="#comunidad">Comunidad</a></li>
+            </ul>
+            <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2">
+              <div class="global-search" id="globalSearchWrap">
+                <label class="visually-hidden" for="globalSearch">Buscar discos y canciones</label>
+                <input id="globalSearch" type="search" placeholder="Buscar en el archivo" autocomplete="off" aria-controls="globalSearchResults" />
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <div class="search-popover" id="globalSearchResults" role="listbox" aria-label="Resultados de búsqueda" hidden></div>
+              </div>
+              <a class="nav-icon-button" href="#favoritos" aria-label="Ir a mis canciones favoritas">
+                <i class="bi bi-heart" aria-hidden="true"></i><span>Favoritos</span><span class="favorite-count" id="favoriteCount">0</span>
+              </a>
+              <button class="nav-icon-button theme-button" type="button" id="themeToggle" aria-label="Cambiar a modo oscuro" aria-pressed="false" title="Cambiar tema">
+                <i class="bi bi-moon-stars" aria-hidden="true"></i><span class="visually-hidden" id="themeLabel">Modo oscuro</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="editorial-hero">
+        <div class="container">
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-lg-5 hero-copy-column reveal">
+              <p class="eyebrow">Folk metal · Rock · Música celta</p>
+              <h1 class="hero-title">Mägo de Oz.<br />Un viaje en canciones.</h1>
+              <p class="hero-description">Discos, historias y melodías celtas para volver a escuchar a tu manera.</p>
+              <div class="hero-actions">
+                <a class="btn btn-gold" href="#discografia">Explorar discografía</a>
+                <a class="scroll-cue" href="#aventura">Elegir por estado de ánimo</a>
+              </div>
+            </div>
+            <div class="col-lg-7 reveal">
+              <div class="hero-collage" aria-label="Imágenes del universo de Mägo de Oz">
+                <figure class="collage-frame collage-main mb-0">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Txus_di_Fellatio_and_Zeta_in_concert_in_2013.jpg" alt="Txus di Fellatio y Zeta actuando en Colombia en 2013" fetchpriority="high" />
+                  <figcaption class="collage-caption">Archivo de directo · Colombia, 2013 · Ricón del kaOz</figcaption>
+                </figure>
+                <figure class="collage-frame mb-0">
+                  <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Neuschwanstein_Castle_2.jpg/960px-Neuschwanstein_Castle_2.jpg" alt="El castillo de Neuschwanstein entre las montañas" loading="lazy" />
+                </figure>
+                <aside class="collage-note">
+                  <span class="note-number">01</span>
+                  <p><strong>El viaje empieza aquí.</strong><br />Música para descubrir, recordar y compartir.</p>
+                  <a class="image-credit" href="https://commons.wikimedia.org/wiki/File:Neuschwanstein_Castle_2.jpg" target="_blank" rel="noopener noreferrer">Paisaje: Valerio Bruscianelli · CC BY-SA 4.0</a>
+                </aside>
+              </div>
+              <p class="image-credit">Foto de directo: Ricón del kaOz · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section-wrap mood-section" id="aventura" aria-labelledby="moodHeading">
+        <div class="container">
+          <div class="row align-items-start g-4">
+            <div class="col-lg-4 reveal">
+              <p class="section-kicker">Punto de partida</p>
+              <h2 class="section-heading" id="moodHeading">Elige tu próxima aventura musical</h2>
+              <p class="section-deck">Una selección breve según el ánimo con el que llegas.</p>
+            </div>
+            <div class="col-lg-8 reveal">
+              <div class="mood-control-list" role="group" aria-label="Seleccionar estado de ánimo">
+                <button class="mood-button" type="button" data-mood="epica" aria-pressed="true">Épica</button>
+                <button class="mood-button" type="button" data-mood="rebelde" aria-pressed="false">Rebelde</button>
+                <button class="mood-button" type="button" data-mood="nostalgica" aria-pressed="false">Nostálgica</button>
+                <button class="mood-button" type="button" data-mood="celta" aria-pressed="false">Celta</button>
+                <button class="mood-button" type="button" data-mood="directo" aria-pressed="false">Para cantar en directo</button>
+              </div>
+              <h3 class="visually-hidden" id="moodResultTitle">Una selección épica</h3>
+              <div class="mood-recommendations" id="moodRecommendations" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-wrap archive-section" id="discografia" aria-labelledby="archiveHeading">
+        <div class="container">
+          <div class="row align-items-end g-3">
+            <div class="col-lg-8 reveal">
+              <p class="section-kicker">Archivo discográfico</p>
+              <h2 class="section-heading" id="archiveHeading">Tres mundos, un mismo camino</h2>
+              <p class="section-deck">Portadas enlazadas al catálogo externo. Los datos de canciones y duración proceden del catálogo de Apple Music.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end reveal"><span class="results-note" id="albumResultCount" aria-live="polite"></span></div>
+          </div>
+          <div class="archive-toolbar reveal" aria-label="Filtros de discografía">
+            <div><label class="field-label" for="albumSearch">Buscar un álbum</label><input class="form-control" id="albumSearch" type="search" placeholder="Título o año" /></div>
+            <div><label class="field-label" for="decadeFilter">Década</label><select class="form-select" id="decadeFilter"><option value="all">Todas</option><option value="1990">Años 90</option><option value="2000">Años 2000</option></select></div>
+            <details class="advanced-filter"><summary>Más filtros</summary><div class="advanced-filter-fields"><div><label class="field-label" for="yearFilter">Año</label><select class="form-select" id="yearFilter"><option value="all">Todos</option></select></div><div><label class="field-label" for="albumOrder">Orden</label><select class="form-select" id="albumOrder"><option value="newest">Más recientes</option><option value="oldest">Más antiguos</option></select></div></div></details>
+          </div>
+          <div class="album-grid reveal" id="albumGrid" aria-live="polite"></div>
+
+          <details class="feature-details reveal mt-5" id="compareTools">
+            <summary>Comparar álbumes</summary>
+            <div class="compare-section pt-4" aria-labelledby="compareHeading">
+              <div class="text-center">
+                <p class="section-kicker">Escucha en paralelo</p>
+                <h2 class="section-heading" id="compareHeading">Dos discos, frente a frente</h2>
+              </div>
+              <div class="compare-controls">
+                <div><label class="field-label" for="compareFirst">Primer álbum</label><select class="form-select compare-select" id="compareFirst"></select></div>
+                <span class="compare-versus" aria-hidden="true">vs.</span>
+                <div><label class="field-label" for="compareSecond">Segundo álbum</label><select class="form-select compare-select" id="compareSecond"></select></div>
+              </div>
+              <div class="comparison-result" id="comparisonResult" aria-live="polite"></div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section-wrap songs-section" id="canciones" aria-labelledby="songsHeading">
+        <div class="container">
+          <div class="row align-items-end g-3">
+            <div class="col-lg-8 reveal">
+              <p class="section-kicker">Índice de canciones</p>
+              <h2 class="section-heading" id="songsHeading">Encuentra ese tema</h2>
+              <p class="section-deck">Los controles de escucha enlazan con búsquedas de Apple Music; esta web no reproduce audio.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end reveal"><span class="results-note" id="songResultCount" aria-live="polite"></span></div>
+          </div>
+          <div class="song-toolbar reveal">
+            <div><label class="field-label" for="songSearch">Buscar canción</label><input class="form-control" id="songSearch" type="search" placeholder="Título o disco" /></div>
+            <div><label class="field-label" for="songAlbumFilter">Álbum</label><select class="form-select" id="songAlbumFilter"><option value="all">Todos los discos</option></select></div>
+            <div><label class="field-label" for="songOrder">Ordenar por</label><select class="form-select" id="songOrder"><option value="album">Orden del álbum</option><option value="title">Título A–Z</option><option value="duration">Duración</option></select></div>
+          </div>
+          <div class="form-check mb-3 reveal"><input class="form-check-input" type="checkbox" id="favoritesOnly" /><label class="form-check-label small" for="favoritesOnly">Mostrar solo mis favoritas</label></div>
+          <div class="song-results reveal" id="songResults" aria-live="polite"></div>
+          <button class="text-action song-more-button" id="showAllSongs" type="button" aria-expanded="false" hidden>Ver todas las canciones</button>
+        </div>
+      </section>
+
+      <section class="section-wrap timeline-section" id="historia" aria-labelledby="timelineHeading">
+        <div class="container">
+          <div class="row align-items-end g-3">
+            <div class="col-lg-8 reveal">
+              <p class="section-kicker">Cronología sonora</p>
+              <h2 class="section-heading" id="timelineHeading">Una historia en movimiento</h2>
+              <p class="section-deck">Hitos seleccionados de la trayectoria del grupo. Abre cada uno para consultar el resumen y su fuente.</p>
+            </div>
+            <div class="col-lg-4 reveal"><label class="field-label" for="timelineFilter">Filtrar periodo</label><select class="form-select timeline-filter" id="timelineFilter"><option value="all">Toda la cronología</option><option value="1980">Años 80</option><option value="1990">Años 90</option><option value="2000">Años 2000</option><option value="2010">Años 2010</option><option value="2020">Años 2020</option></select></div>
+          </div>
+          <div class="timeline-track reveal" id="timelineTrack" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section-wrap community-section" id="comunidad" aria-labelledby="communityHeading">
+        <div class="container">
+          <div class="mb-4 reveal">
+            <p class="section-kicker">Participación local</p>
+            <h2 class="section-heading" id="communityHeading">Tu archivo de Oz</h2>
+            <p class="section-deck">Votos y favoritos se guardan solo en este navegador; no representan una encuesta global.</p>
+          </div>
+          <details class="feature-details reveal">
+            <summary>Encuesta y favoritos</summary>
+          <div class="community-layout mt-3">
+            <section class="community-panel reveal" aria-labelledby="pollHeading">
+              <h3 id="pollHeading">¿Qué canción llevarías al directo?</h3>
+              <p class="local-label" id="pollTotal">0 votos locales</p>
+              <form id="voteForm">
+                <fieldset class="border-0 p-0 m-0"><legend class="visually-hidden">Selecciona una canción</legend><div class="poll-options" id="pollOptions"></div></fieldset>
+                <button class="btn btn-gold btn-sm" type="submit">Guardar mi voto</button>
+              </form>
+              <div class="poll-results" id="pollResults" aria-label="Ranking local de votos"></div>
+            </section>
+            <section class="community-panel reveal" id="favoritos" aria-labelledby="favoritesHeading">
+              <div class="d-flex justify-content-between align-items-start gap-3">
+                <div><h3 id="favoritesHeading">Mis canciones favoritas</h3><p class="local-label">Guardadas en este dispositivo.</p></div>
+                <button class="icon-button" id="shareFavorites" type="button" aria-label="Compartir mis favoritos"><i class="bi bi-share" aria-hidden="true"></i><span>Compartir</span></button>
+              </div>
+              <p class="empty-state" id="favoriteEmpty">Todavía no has guardado ninguna canción. Pulsa el corazón en el índice para añadirla.</p>
+              <ul class="favorite-list" id="favoriteList"></ul>
+              <label class="visually-hidden" for="shareUrl">Enlace compartible a tus favoritos</label>
+              <input class="share-link-field" id="shareUrl" type="url" readonly hidden />
+            </section>
+          </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section-wrap" id="actualidad" aria-labelledby="newsHeading">
+        <div class="container">
+          <div class="row align-items-end g-3 mb-4">
+            <div class="col-lg-8 reveal"><p class="section-kicker">Fuentes oficiales</p><h2 class="section-heading" id="newsHeading">Actualidad y agenda</h2><p class="section-deck">Consulta los anuncios y fechas directamente en los canales oficiales del grupo.</p></div>
+            <div class="col-lg-4 text-lg-end reveal"><span class="local-label">Agenda consultada el <time datetime="2026-10-27">27 oct 2026</time></span></div>
+          </div>
+          <div class="news-layout">
+            <article class="news-card reveal">
+              <div><p class="section-kicker">Lanzamiento destacado</p><h3>Malicia: La noche de las brujas</h3><p>La web oficial presenta este álbum como el lanzamiento actual de la banda. Consulta allí las novedades y sus canales de escucha.</p></div>
+              <a class="text-action" href="https://magodeozoficial.com/" target="_blank" rel="noopener noreferrer">Visitar web oficial <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </article>
+            <div class="concert-list reveal" id="concertList" aria-live="polite"></div>
+          </div>
+          <p class="footer-source mt-3">Las fechas se muestran según la agenda oficial; los detalles y entradas pueden cambiar. <a href="https://magodeozoficial.com/conciertos/" target="_blank" rel="noopener noreferrer">Abrir agenda oficial</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+        <div><a class="brand-lockup" href="#descubrir"><span class="brand-seal" aria-hidden="true">OZ</span><span>Oz Archivo</span></a><p class="footer-note">Proyecto independiente de fans, sin fines comerciales.</p></div>
+        <div class="d-flex flex-wrap gap-3"><a class="footer-source" href="https://music.apple.com/us/artist/m%C3%A4go-de-oz/165478235" target="_blank" rel="noopener noreferrer">Catálogo musical</a><a class="footer-source" href="https://magodeozoficial.com/" target="_blank" rel="noopener noreferrer">Web oficial</a><a class="footer-source" href="https://es.wikipedia.org/wiki/M%C3%A4go_de_Oz" target="_blank" rel="noopener noreferrer">Fuentes históricas</a></div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="albumModal" tabindex="-1" aria-labelledby="albumModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable"><div class="modal-content">
+        <div class="modal-header"><div><p class="album-year-line mb-1" id="albumModalMeta"></p><h2 class="modal-title fs-4" id="albumModalTitle"></h2></div><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar"></button></div>
+        <div class="modal-body"><p id="albumModalDescription"></p><p class="small text-secondary" id="albumModalNote"></p><h3 class="h6 mt-4">Listado de canciones y duración</h3><ol class="modal-track-list" id="albumModalTracks"></ol></div>
+        <div class="modal-footer"><a class="btn btn-gold" id="albumModalLink" href="#" target="_blank" rel="noopener noreferrer">Abrir álbum en Apple Music</a><button class="btn btn-outline-gold" type="button" data-bs-dismiss="modal">Cerrar</button></div>
+      </div></div>
+    </div>
+
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5" id="infoModalTitle"></h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar"></button></div><div class="modal-body" id="infoModalBody"></div></div></div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3"><div class="toast site-toast" id="siteToast" role="status" aria-live="polite" aria-atomic="true"><div class="toast-body" id="toastMessage"></div></div></div>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Volver arriba"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>
