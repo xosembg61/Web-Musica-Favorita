@@ -1,0 +1,10 @@
+/* Damos color y altura a las columnas para ver la cuadrícula */
+.grid-demo .col-md-1, .grid-demo .col-md-2, .grid-demo .col-md-3,
+.grid-demo .col-md-4, .grid-demo .col-md-6, .grid-demo .col-md-8 {
+  background-color: #34495e;
+  color: white;
+  height: 5em;
+  line-height: 5em;
+  text-align: center;
+  border: 1px solid white;
+}
