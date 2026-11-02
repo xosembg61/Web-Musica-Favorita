@@ -1,0 +1,108 @@
+/* ============================================================
+   style.css  —  Mägo de Oz
+   ------------------------------------------------------------
+   Regla de oro del enunciado: el CSS propio debe ser MÍNIMO.
+   Aquí solo:
+     1) redefinimos VARIABLES de Bootstrap para dar la estética
+        del grupo (fondo oscuro + dorado), y
+     2) cuatro detalles que Bootstrap no resuelve con clases:
+        barra fija, altura uniforme de las fotos y botón de móvil.
+   Todo lo demás (espaciados, colores, alineaciones...) se hace
+   con clases de utilidad de Bootstrap en el HTML (py-5, mb-3...).
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1) VARIABLES DE BOOTSTRAP REDEFINIDAS
+   Bootstrap define sus colores como variables CSS en :root
+   (por ejemplo --bs-body-bg). Cambiándolas aquí cambiamos el
+   tema entero sin escribir reglas nuevas.
+   ------------------------------------------------------------ */
+:root {
+  --bs-body-bg: #12120f;      /* color de fondo de toda la página (negro cálido) */
+  --bs-body-color: #eae6dc;   /* color del texto por defecto (claro) */
+  --bs-primary: #d4a942;      /* color primario: dorado del grupo (botones, enlaces...) */
+  --bs-primary-rgb: 212, 169, 66;  /* el mismo dorado en formato RGB (algunos
+                                      componentes lo usan para transparencias) */
+  --bs-link-color: #e0bb63;   /* color de los enlaces <a> */
+  --bs-link-hover-color: #f0d68a;  /* color del enlace al pasar el ratón */
+}
+
+/* ------------------------------------------------------------
+   Los botones "primary" cogen el color de --bs-primary, pero
+   Bootstrap también les define sus propias variables internas
+   (--bs-btn-bg...), así que las redefinimos para que el botón
+   salga dorado de verdad, también al pasar el ratón (hover)
+   y al pulsarlo (active).
+   ------------------------------------------------------------ */
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);            /* fondo normal */
+  --bs-btn-border-color: var(--bs-primary);  /* borde normal */
+  --bs-btn-color: #1a1710;                   /* color del texto del botón (oscuro sobre dorado) */
+  --bs-btn-hover-bg: #e0bb63;                /* fondo al pasar el ratón */
+  --bs-btn-hover-border-color: #e0bb63;      /* borde al pasar el ratón */
+  --bs-btn-hover-color: #1a1710;             /* texto al pasar el ratón */
+  --bs-btn-active-bg: #b8912f;               /* fondo al pulsar */
+  --bs-btn-active-border-color: #b8912f;     /* borde al pulsar */
+  --bs-btn-active-color: #1a1710;            /* texto al pulsar */
+}
+
+/* Lo mismo con la paginación: la página activa sale dorada */
+.pagination {
+  --bs-pagination-active-bg: var(--bs-primary);
+  --bs-pagination-active-border-color: var(--bs-primary);
+  --bs-pagination-active-color: #1a1710;
+}
+
+
+/* ------------------------------------------------------------
+   2) DETALLES MÍNIMOS DE MAQUETACIÓN
+   ------------------------------------------------------------ */
+
+/* La barra de navegación es fixed-top (queda fija arriba), así que
+   añadimos padding al body para que el primer contenido (el carrusel)
+   no quede tapado debajo de la barra */
+body {
+  padding-top: 60px;   /* altura aproximada de la navbar */
+}
+
+/* Nombre del grupo en la barra: lo pintamos de dorado y un poco más grande */
+.navbar-brand {
+  color: var(--bs-primary) !important;  /* !important para ganar a Bootstrap */
+  font-size: 1.35rem;
+}
+
+/* Todas las fotos del carrusel con la MISMA altura (460px en móvil),
+   recortando lo que sobre para que no se deformen */
+#portada .carousel-item img {
+  height: 460px;
+  object-fit: cover;       /* recorta la imagen para rellenar el hueco */
+}
+
+/* En pantallas medianas o grandes, el carrusel es un poco más alto */
+@media (min-width: 768px) {
+  #portada .carousel-item img {
+    height: 560px;
+  }
+}
+
+/* Fotos de las tarjetas de miembros: altura fija de 300px, recortadas
+   desde arriba (object-position: center top) para que se vea la cara */
+.foto-miembro {
+  height: 300px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Fotos de las tarjetas de discos: un poco más bajas */
+.foto-disco {
+  height: 230px;
+  object-fit: cover;
+}
+
+/* Botón «Entradas» que solo se ve en móvil (d-md-none en el HTML):
+   lo colocamos fijo abajo a la derecha de la pantalla */
+.boton-movil {
+  right: 1rem;     /* 1rem desde la derecha */
+  bottom: 1rem;    /* 1rem desde abajo */
+  z-index: 1030;   /* por encima del contenido, pero por debajo de la modal */
+}

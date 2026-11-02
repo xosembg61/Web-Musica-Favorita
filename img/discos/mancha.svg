@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="Portada del disco La Leyenda de La Mancha">
+  <defs>
+    <linearGradient id="atardecer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a1a2e"/>
+      <stop offset=".45" stop-color="#8c3f2c"/>
+      <stop offset=".78" stop-color="#d9902f"/>
+      <stop offset="1" stop-color="#f2c65c"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#atardecer)"/>
+  <circle cx="250" cy="330" r="96" fill="#ffe6a3" opacity=".85"/>
+  <circle cx="250" cy="330" r="140" fill="#ffd98a" opacity=".18"/>
+  <g stroke="#2a1a1a" stroke-opacity=".8" stroke-width="4" fill="none">
+    <path d="M40 300q40-16 80 0M120 260q30-12 60 0M330 250q34-14 68 0"/>
+  </g>
+  <g fill="#2a1a2e" opacity=".55">
+    <path d="M0 356q70-30 140-8t120-6 120 10 120-12v160H0z"/>
+  </g>
+  <path d="M0 380q80-24 160-4t120 4 100 6 120-14v134H0z" fill="#170f14"/>
+  <g fill="#0d0a0c">
+    <g transform="translate(150,330)">
+      <path d="M-16 0h32l10 88h-52z"/>
+      <circle cx="0" cy="-10" r="20"/>
+      <g stroke="#0d0a0c" stroke-width="7" stroke-linecap="round">
+        <path d="M0 -10L64 -46M0 -10L-58 -52M0 -10L52 40M0 -10L-46 44"/>
+      </g>
+    </g>
+    <g transform="translate(352,352) scale(.72)">
+      <path d="M-16 0h32l10 88h-52z"/>
+      <circle cx="0" cy="-10" r="20"/>
+      <g stroke="#0d0a0c" stroke-width="7" stroke-linecap="round">
+        <path d="M0 -10L64 -46M0 -10L-58 -52M0 -10L52 40M0 -10L-46 44"/>
+      </g>
+    </g>
+  </g>
+  <g stroke="#3a2330" stroke-width="3" fill="none" opacity=".9">
+    <path d="M60 120q14-12 28 0M100 96q12-10 24 0M380 110q14-12 28 0"/>
+  </g>
+  <text x="250" y="72" text-anchor="middle" font-family="Georgia,serif" font-size="30" letter-spacing="5" fill="#2a1420">LA LEYENDA</text>
+  <text x="250" y="106" text-anchor="middle" font-family="Georgia,serif" font-size="30" letter-spacing="5" fill="#2a1420">DE LA MANCHA</text>
+  <rect x="16" y="16" width="468" height="468" fill="none" stroke="#f0d68a" stroke-opacity=".35" stroke-width="2"/>
+</svg>

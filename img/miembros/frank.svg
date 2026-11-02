@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Ilustración de Frank, guitarra rítmica de Mägo de Oz">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a3a1f"/>
+      <stop offset=".55" stop-color="#1a1710"/>
+      <stop offset="1" stop-color="#090a08"/>
+    </linearGradient>
+    <radialGradient id="halo" cx=".5" cy=".32" r=".5">
+      <stop offset="0" stop-color="#ffd98a" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#ffd98a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#fondo)"/>
+  <rect width="400" height="500" fill="url(#halo)"/>
+  <g fill="none" stroke="#d4a942" stroke-opacity=".26">
+    <circle cx="200" cy="164" r="128" stroke-width="2"/><circle cx="200" cy="164" r="112" stroke-width="1"/>
+  </g>
+  <g fill="#0a0907" stroke="#e2bb63" stroke-opacity=".4" stroke-width="2.5">
+    <circle cx="200" cy="152" r="50"/>
+    <path d="M200 206c-56 0-90 38-96 96h192c-6-58-40-96-96-96z"/>
+  </g>
+  <g transform="translate(200,372)" fill="none" stroke="#d4a942" stroke-width="5" stroke-linecap="round">
+    <rect x="-6" y="-76" width="12" height="52"/>
+    <circle cx="0" cy="-8" r="24"/>
+    <circle cx="0" cy="26" r="32"/>
+    <circle cx="0" cy="20" r="9"/>
+  </g>
+  <text x="200" y="470" text-anchor="middle" font-family="Georgia,serif" font-size="44" letter-spacing="7" fill="#d4a942" fill-opacity=".2">FRANK</text>
+</svg>
