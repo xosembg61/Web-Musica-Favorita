@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Violinista de Mägo de Oz bajo un foco en pleno concierto">
+  <defs>
+    <linearGradient id="p2fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c1408"/>
+      <stop offset=".55" stop-color="#0d1211"/>
+      <stop offset="1" stop-color="#06080a"/>
+    </linearGradient>
+    <radialGradient id="p2luz" cx=".46" cy=".34" r=".5">
+      <stop offset="0" stop-color="#ffcf7a" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#ffcf7a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#p2fondo)"/>
+  <rect width="1600" height="900" fill="url(#p2luz)"/>
+  <rect x="0" y="760" width="1600" height="140" fill="#050706"/>
+  <g fill="none" stroke="#d4a942" stroke-opacity=".18" stroke-width="2">
+    <circle cx="736" cy="410" r="300"/><circle cx="736" cy="410" r="230"/>
+  </g>
+  <g transform="translate(736,0)">
+    <circle cx="0" cy="300" r="46" fill="#060908" stroke="#e2bb63" stroke-opacity=".45" stroke-width="3"/>
+    <path d="M0 348c-62 0-96 46-104 148l-16 264h90l22-238 22 238h92l-14-266C92 392 62 348 0 348z" fill="#060908" stroke="#e2bb63" stroke-opacity=".3" stroke-width="3"/>
+    <path d="M40 392c70 6 110 34 128 74" fill="none" stroke="#060908" stroke-width="26" stroke-linecap="round"/>
+    <path d="M-44 400c-56 24-78 62-72 106" fill="none" stroke="#060908" stroke-width="26" stroke-linecap="round"/>
+    <g transform="translate(150,436) rotate(-18)">
+      <ellipse cx="0" cy="0" rx="62" ry="44" fill="#2a1c0c" stroke="#e2bb63" stroke-opacity=".6" stroke-width="3"/>
+      <ellipse cx="-58" cy="-4" rx="34" ry="26" fill="#2a1c0c" stroke="#e2bb63" stroke-opacity=".6" stroke-width="3"/>
+      <rect x="-186" y="-12" width="110" height="12" fill="#1a1208" stroke="#e2bb63" stroke-opacity=".5" stroke-width="2"/>
+      <circle cx="-192" cy="-6" r="12" fill="#e2bb63" opacity=".8"/>
+      <path d="M-16 -22q10 0 10 22t-10 22M20 -22q-10 0-10 22t10 22" fill="none" stroke="#e2bb63" stroke-opacity=".7" stroke-width="3"/>
+    </g>
+    <path d="M-70 330L300 500" stroke="#f6e3a9" stroke-opacity=".75" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g fill="#f6e3a9">
+    <circle cx="300" cy="220" r="5" opacity=".7"/><circle cx="420" cy="420" r="3" opacity=".5"/>
+    <circle cx="1180" cy="260" r="6" opacity=".6"/><circle cx="1300" cy="480" r="3" opacity=".45"/>
+    <circle cx="1080" cy="620" r="4" opacity=".5"/><circle cx="220" cy="600" r="4" opacity=".4"/>
+    <circle cx="980" cy="160" r="3" opacity=".5"/><circle cx="560" cy="140" r="4" opacity=".45"/>
+  </g>
+  <rect width="1600" height="900" fill="none" stroke="#000" stroke-opacity=".4" stroke-width="60"/>
+</svg>
