@@ -1,15 +1,3 @@
-/* ============================================================
-   style.css  —  Mägo de Oz
-   ------------------------------------------------------------
-   Regla de oro del enunciado: el CSS propio debe ser MÍNIMO.
-   Aquí solo:
-     1) redefinimos VARIABLES de Bootstrap para dar la estética
-        del grupo (fondo oscuro + dorado), y
-     2) cuatro detalles que Bootstrap no resuelve con clases:
-        barra fija, altura uniforme de las fotos y botón de móvil.
-   Todo lo demás (espaciados, colores, alineaciones...) se hace
-   con clases de utilidad de Bootstrap en el HTML (py-5, mb-3...).
-   ============================================================ */
 
 /* ------------------------------------------------------------
    1) VARIABLES DE BOOTSTRAP REDEFINIDAS
@@ -89,14 +77,14 @@ body {
    desde arriba (object-position: center top) para que se vea la cara */
 .foto-miembro {
   height: 300px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center top;
 }
 
 /* Fotos de las tarjetas de discos: un poco más bajas */
 .foto-disco {
   height: 230px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Botón «Entradas» que solo se ve en móvil (d-md-none en el HTML):
