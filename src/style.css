@@ -1,16 +1,34 @@
 [data-bs-theme="dark"] {
   color-scheme: dark;
-  --bs-body-bg: #0b100d;
-  --bs-body-color: #f3efe3;
-  --bs-primary: #c99751;
-  --bs-primary-rgb: 201, 151, 81;
-  --bs-secondary-bg: #18211b;
-  --bs-tertiary-bg: #111813;
-  --bs-border-color: #344138;
-  --bs-link-color: #e3ba77;
-  --bs-link-hover-color: #f3d9a3;
-  --bs-emphasis-color: #fff9eb;
-  --bs-secondary-color: rgba(224, 226, 212, 0.73);
+  --bs-body-bg: #0d120f;
+  --bs-body-bg-rgb: 13, 18, 15;
+  --bs-body-color: #f1eee4;
+  --bs-body-color-rgb: 241, 238, 228;
+  --bs-emphasis-color: #fffaf0;
+  --bs-secondary-color: rgba(222, 224, 210, 0.74);
+  --bs-primary: #c79b56;
+  --bs-primary-rgb: 199, 155, 86;
+  --bs-primary-text-emphasis: #edc980;
+  --bs-primary-bg-subtle: #382b19;
+  --bs-primary-border-subtle: #73552d;
+  --bs-secondary: #81947f;
+  --bs-secondary-rgb: 129, 148, 127;
+  --bs-secondary-bg: #1a231c;
+  --bs-secondary-bg-rgb: 26, 35, 28;
+  --bs-tertiary-bg: #121a15;
+  --bs-tertiary-bg-rgb: 18, 26, 21;
+  --bs-border-color: #364238;
+  --bs-link-color: #e4c17e;
+  --bs-link-hover-color: #f4ddb0;
   --bs-card-bg: #151d17;
-  --bs-card-border-color: #344138;
+  --bs-card-border-color: #364238;
+}
+
+.band-logo {
+  display: inline-block;
+  width: 150px;
+  height: 47px;
+  background-color: var(--bs-warning);
+  -webkit-mask: url("https://upload.wikimedia.org/wikipedia/commons/8/82/M%C3%A4go_de_Oz_logo.svg") center / contain no-repeat;
+  mask: url("https://upload.wikimedia.org/wikipedia/commons/8/82/M%C3%A4go_de_Oz_logo.svg") center / contain no-repeat;
 }
