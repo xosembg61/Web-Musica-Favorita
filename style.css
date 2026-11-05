@@ -94,3 +94,143 @@ body {
   bottom: 1rem;    /* 1rem desde abajo */
   z-index: 1030;   /* por encima del contenido, pero por debajo de la modal */
 }
+
+/* Tema adaptable: el selector cambia data-bs-theme en <html>. */
+html[data-bs-theme="dark"] {
+  --bs-body-bg: #12120f;
+  --bs-body-color: #eae6dc;
+  --bs-primary: #d4a942;
+  --bs-primary-rgb: 212, 169, 66;
+  --bs-link-color: #e0bb63;
+  --bs-link-hover-color: #f0d68a;
+  color-scheme: dark;
+}
+html[data-bs-theme="light"] {
+  --bs-body-bg: #fffaf0;
+  --bs-body-color: #28251f;
+  --bs-primary: #9b7114;
+  --bs-primary-rgb: 155, 113, 20;
+  --bs-link-color: #79570d;
+  --bs-link-hover-color: #4c3505;
+  color-scheme: light;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { transition: background-color .2s ease, color .2s ease; }
+.faq-wrap { max-width: 850px; }
+.accordion { --bs-accordion-bg: var(--bs-body-bg); --bs-accordion-color: var(--bs-body-color); }
+.btn-outline-warning { --bs-btn-color: var(--bs-primary); --bs-btn-border-color: var(--bs-primary); }
+.form-check .invalid-feedback { margin-top: .35rem; }
+
+.album-hero { padding-top: 7rem !important; }
+.album-cover {
+  display: block;
+  width: min(100%, 380px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid rgba(212,169,66,.65);
+  border-radius: .35rem;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.35), 0 0 2rem rgba(212,169,66,.12);
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Colores explícitos del lienzo para que el selector se aprecie incluso en vistas
+   que no cargan todas las variables de Bootstrap. El tema se controla desde html. */
+html[data-bs-theme="dark"] body { background-color: #12120f !important; color: #eae6dc !important; }
+html[data-bs-theme="light"] body { background-color: #fffaf0 !important; color: #28251f !important; }
+html[data-bs-theme="light"] .bg-body-tertiary { background-color: #f2ead8 !important; }
+html[data-bs-theme="light"] .text-secondary { color: #625c50 !important; }
+html[data-bs-theme="light"] .navbar { background-color: #28251f !important; }
+html[data-bs-theme="light"] .navbar .nav-link { color: #f5f1e8 !important; }
+html[data-bs-theme="light"] .navbar .navbar-toggler { border-color: rgba(255,255,255,.35); }
+html[data-bs-theme="light"] .navbar .navbar-toggler-icon { filter: brightness(0) invert(1); }
+
+/* Contraste alto del texto del carrusel: una placa opaca evita depender de la foto. */
+#portada .carousel-caption {
+  left: 50%;
+  right: auto;
+  bottom: 2rem;
+  width: min(88%, 44rem);
+  transform: translateX(-50%);
+  padding: 1rem 1.25rem;
+  border: 1px solid #f5f5f5;
+  border-radius: .75rem;
+  background-color: #111 !important;
+  color: #fff !important;
+  text-shadow: none;
+}
+#portada .carousel-caption h1,
+#portada .carousel-caption h2,
+#portada .carousel-caption p { color: inherit !important; }
+
+html[data-bs-theme="light"] #portada .carousel-caption {
+  background-color: #fff !important;
+  color: #111 !important;
+  border-color: #333;
+}
+html[data-bs-theme="light"] #portada .carousel-caption .btn-outline-light {
+  --bs-btn-color: #111;
+  --bs-btn-border-color: #111;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #111;
+  --bs-btn-hover-border-color: #111;
+}
+
+/* Tarjetas de integrantes: texto claro sobre oscuro y oscuro sobre claro. */
+html[data-bs-theme="dark"] #grupo .card {
+  background-color: #171713 !important;
+  color: #f5f3e9 !important;
+  border-color: #6b624f;
+}
+html[data-bs-theme="dark"] #grupo .card .text-warning { color: #ffe08a !important; }
+html[data-bs-theme="dark"] #grupo .card .text-secondary { color: #e6e2d8 !important; }
+
+html[data-bs-theme="light"] #grupo .card {
+  background-color: #fff !important;
+  color: #171717 !important;
+  border-color: #565656;
+}
+html[data-bs-theme="light"] #grupo .card h3 { color: #171717 !important; }
+html[data-bs-theme="light"] #grupo .card .text-warning { color: #614400 !important; }
+html[data-bs-theme="light"] #grupo .card .text-secondary { color: #454545 !important; }
+
+/* Correcciones adicionales de contraste señaladas por WAVE en ambas páginas. */
+html[data-bs-theme="dark"] .text-secondary { color: #d3d3d3 !important; }
+html[data-bs-theme="light"] .text-secondary { color: #454545 !important; }
+html[data-bs-theme="dark"] .text-warning { color: #ffe08a !important; }
+html[data-bs-theme="light"] .text-warning { color: #614400 !important; }
+
+/* Dorado claro suficiente para texto oscuro en botones primarios del tema claro. */
+html[data-bs-theme="light"] {
+  --bs-primary: #d4a942;
+  --bs-primary-rgb: 212, 169, 66;
+}
+
+/* Botones outline-light resultaban casi invisibles sobre fondos claros. */
+html[data-bs-theme="light"] .btn-outline-light {
+  --bs-btn-color: #171717;
+  --bs-btn-border-color: #171717;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #171717;
+  --bs-btn-hover-border-color: #171717;
+}
+/* El botón del selector vive sobre la navbar oscura: conserva texto dorado claro. */
+html[data-bs-theme="light"] .navbar .btn-outline-warning {
+  --bs-btn-color: #ffe08a;
+  --bs-btn-border-color: #ffe08a;
+  --bs-btn-hover-color: #171717;
+  --bs-btn-hover-bg: #ffe08a;
+  --bs-btn-hover-border-color: #ffe08a;
+}
+/* Resto de botones outline-warning sobre fondo claro usan un tono oscuro legible. */
+html[data-bs-theme="light"] .btn-outline-warning:not(.navbar .btn-outline-warning) {
+  --bs-btn-color: #614400;
+  --bs-btn-border-color: #614400;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #614400;
+  --bs-btn-hover-border-color: #614400;
+}
+
+/* Enlaces de créditos: color de texto con contraste AA en el footer de cada tema. */
+html[data-bs-theme="dark"] footer a:not(.btn) { color: #ffe08a !important; }
+html[data-bs-theme="light"] footer a:not(.btn) { color: #553600 !important; }
