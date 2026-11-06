@@ -1,6 +1,6 @@
 # Mägo de Oz
 
-Página de práctica con React, Vite y Bootstrap 5.3.8, con una estética oscura y morada inspirada en la web original.
+Página de práctica con JavaScript Vanilla, Vite y Bootstrap 5.3.8. La estética oscura, la tipografía condensada y los acentos morados reflejan la identidad de Mägo de Oz.
 
 ## Ejecutar
 
@@ -17,8 +17,8 @@ Para generar la carpeta `dist` y la vista previa independiente:
 npm run build
 ```
 
-## Secciones
+## Contenido
 
-La página incluye portada con carrusel, presentación del grupo y miembros, canciones, discos con listas desplegables, fechas de gira, vídeos, formulario de contacto modal y pie con redes y aviso legal.
+La página incluye una barra de navegación responsive con menú desplegable, carrusel, biografía y tarjetas de miembros, canciones, discos con listas desplegables, fechas de gira, vídeos y formulario de contacto modal con validación Bootstrap. El pie incluye redes sociales y aviso legal.
 
-Las fechas de la tabla son ficticias y se muestran como ejemplos. El formulario no envía ni almacena datos. Las tarjetas usan retratos individuales; tres tienen licencia Creative Commons y el de Mohamed procede de una publicación de prensa que no especifica licencia. Los créditos están en `src/assets/CREDITOS.md`.
+Las fechas de la tabla son ficticias y se muestran como ejemplos. El formulario valida los campos, pero no envía ni almacena datos. Las tarjetas usan retratos individuales; tres tienen licencia Creative Commons y el de Mohamed procede de una publicación de prensa que no especifica licencia. Los créditos están en `src/assets/CREDITOS.md`.

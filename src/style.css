@@ -59,10 +59,18 @@ section[id] {
 
 .brand-name {
   font-size: 2rem;
+  line-height: 1;
+  color: var(--accent);
+  text-shadow: 0 0 18px #b48ad533;
+}
+
+.brand-name:hover,
+.brand-name:focus-visible {
+  color: var(--bs-link-hover-color);
 }
 
 .brand-name span {
-  color: var(--accent);
+  color: var(--accent-strong);
 }
 
 .topline {
