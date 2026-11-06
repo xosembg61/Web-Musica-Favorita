@@ -33,6 +33,7 @@
                           en móviles se pliega detrás del botón hamburguesa.
        fixed-top        : la barra queda fija arriba al hacer scroll.
        data-bs-theme="dark" : tema oscuro de la barra (modo recomendado en 5.3). -->
+  <!-- bg-dark y data-bs-theme="dark" son fijos para que la navbar conserve contraste en ambos temas. -->
   <nav class="navbar navbar-expand-md fixed-top bg-dark" data-bs-theme="dark">
     <div class="container">
     <!-- container para centrar y separar el contenido -->
@@ -158,11 +159,13 @@
 
     </div>
 
-    <!-- FLECHA ANTERIOR: data-bs-slide="prev" vuelve a la foto anterior -->
+    <!-- FLECHA ANTERIOR: data-bs-slide="prev" vuelve a la foto anterior.
+         aria-label aporta el nombre accesible sin texto visualmente oculto que WAVE evaluaba por contraste. -->
     <button class="carousel-control-prev" type="button" data-bs-target="#portada" data-bs-slide="prev" aria-label="Anterior">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     </button>
-    <!-- FLECHA SIGUIENTE: data-bs-slide="next" avanza a la foto siguiente -->
+    <!-- FLECHA SIGUIENTE: data-bs-slide="next" avanza a la siguiente foto;
+         aria-label ofrece su nombre a lectores de pantalla sin añadir texto visible. -->
     <button class="carousel-control-next" type="button" data-bs-target="#portada" data-bs-slide="next" aria-label="Siguiente">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
     </button>

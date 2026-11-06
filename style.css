@@ -99,8 +99,8 @@ body {
 html[data-bs-theme="dark"] {
   --bs-body-bg: #12120f;
   --bs-body-color: #eae6dc;
-  --bs-primary: #d4a942;
-  --bs-primary-rgb: 212, 169, 66;
+  --bs-primary: #d4a942; /* Dorado suficientemente claro para texto oscuro en botones. */
+  --bs-primary-rgb: 212, 169, 66; /* Valor RGB equivalente para componentes Bootstrap. */
   --bs-link-color: #e0bb63;
   --bs-link-hover-color: #f0d68a;
   color-scheme: dark;
@@ -163,11 +163,13 @@ html[data-bs-theme="light"] .navbar .navbar-toggler-icon { filter: brightness(0)
 #portada .carousel-caption h2,
 #portada .carousel-caption p { color: inherit !important; }
 
+/* En modo claro se invierten la placa y el texto: blanco/negro para máximo contraste. */
 html[data-bs-theme="light"] #portada .carousel-caption {
   background-color: #fff !important;
   color: #111 !important;
   border-color: #333;
 }
+/* El botón outline del carrusel también pasa a oscuro sobre la placa blanca. */
 html[data-bs-theme="light"] #portada .carousel-caption .btn-outline-light {
   --bs-btn-color: #111;
   --bs-btn-border-color: #111;
@@ -177,6 +179,7 @@ html[data-bs-theme="light"] #portada .carousel-caption .btn-outline-light {
 }
 
 /* Tarjetas de integrantes: texto claro sobre oscuro y oscuro sobre claro. */
+/* Tema oscuro: tarjeta oscura, texto claro y dorado pálido para los cargos. */
 html[data-bs-theme="dark"] #grupo .card {
   background-color: #171713 !important;
   color: #f5f3e9 !important;
@@ -185,6 +188,7 @@ html[data-bs-theme="dark"] #grupo .card {
 html[data-bs-theme="dark"] #grupo .card .text-warning { color: #ffe08a !important; }
 html[data-bs-theme="dark"] #grupo .card .text-secondary { color: #e6e2d8 !important; }
 
+/* Tema claro: tarjeta blanca, texto negro y acentos oscuros legibles. */
 html[data-bs-theme="light"] #grupo .card {
   background-color: #fff !important;
   color: #171717 !important;
@@ -195,10 +199,10 @@ html[data-bs-theme="light"] #grupo .card .text-warning { color: #614400 !importa
 html[data-bs-theme="light"] #grupo .card .text-secondary { color: #454545 !important; }
 
 /* Correcciones adicionales de contraste señaladas por WAVE en ambas páginas. */
-html[data-bs-theme="dark"] .text-secondary { color: #d3d3d3 !important; }
-html[data-bs-theme="light"] .text-secondary { color: #454545 !important; }
-html[data-bs-theme="dark"] .text-warning { color: #ffe08a !important; }
-html[data-bs-theme="light"] .text-warning { color: #614400 !important; }
+html[data-bs-theme="dark"] .text-secondary { color: #d3d3d3 !important; } /* Gris claro sobre fondos oscuros. */
+html[data-bs-theme="light"] .text-secondary { color: #454545 !important; } /* Gris oscuro sobre fondos claros. */
+html[data-bs-theme="dark"] .text-warning { color: #ffe08a !important; } /* Dorado pálido legible en modo oscuro. */
+html[data-bs-theme="light"] .text-warning { color: #614400 !important; } /* Ocre oscuro legible en modo claro. */
 
 /* Dorado claro suficiente para texto oscuro en botones primarios del tema claro. */
 html[data-bs-theme="light"] {
@@ -215,6 +219,7 @@ html[data-bs-theme="light"] .btn-outline-light {
   --bs-btn-hover-border-color: #171717;
 }
 /* El botón del selector vive sobre la navbar oscura: conserva texto dorado claro. */
+/* Excepción: este botón está sobre la navbar oscura, por eso mantiene el texto dorado claro. */
 html[data-bs-theme="light"] .navbar .btn-outline-warning {
   --bs-btn-color: #ffe08a;
   --bs-btn-border-color: #ffe08a;
@@ -223,6 +228,7 @@ html[data-bs-theme="light"] .navbar .btn-outline-warning {
   --bs-btn-hover-border-color: #ffe08a;
 }
 /* Resto de botones outline-warning sobre fondo claro usan un tono oscuro legible. */
+/* Otros botones outline-warning están sobre fondos claros y usan ocre oscuro. */
 html[data-bs-theme="light"] .btn-outline-warning:not(.navbar .btn-outline-warning) {
   --bs-btn-color: #614400;
   --bs-btn-border-color: #614400;
@@ -232,5 +238,5 @@ html[data-bs-theme="light"] .btn-outline-warning:not(.navbar .btn-outline-warnin
 }
 
 /* Enlaces de créditos: color de texto con contraste AA en el footer de cada tema. */
-html[data-bs-theme="dark"] footer a:not(.btn) { color: #ffe08a !important; }
-html[data-bs-theme="light"] footer a:not(.btn) { color: #553600 !important; }
+html[data-bs-theme="dark"] footer a:not(.btn) { color: #ffe08a !important; } /* Enlaces claros sobre el pie oscuro. */
+html[data-bs-theme="light"] footer a:not(.btn) { color: #553600 !important; } /* Enlaces oscuros sobre el pie claro. */
