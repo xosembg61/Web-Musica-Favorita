@@ -9,9 +9,16 @@ Autor: Premsa Ajuntament de Torrent. Copia sin modificar del recorte de Wikimedi
 - Licencia: https://creativecommons.org/licenses/by-sa/2.0/
 - La composición aplica recorte visual y una capa oscura mediante CSS; el archivo fotográfico no se ha retocado.
 
+## Retratos de miembros
+
+- `images/txus-portrait.jpg`: Txus di Fellatio en 2013, fotografía de Ricón del kaOz, CC BY-SA 3.0. [Archivo en Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Txus_di_Fellatio_in_2013_(cropped).jpg).
+- `images/jose-andrea-portrait.jpg`: José Andrëa en Santiago de Chile (2023), fotografía de Mariano Beuses, CC BY-SA 4.0. [Archivo en Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jose_Andr%C3%ABa_-_Santiago,_Chile_25-08-2023.jpg).
+- `images/carlitos-portrait.jpg`: Carlitos, fotografía de Mario Hernández, CC BY-SA 3.0. [Archivo en Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Carlitos_(Mago_de_Oz).jpg).
+- Mohamed: imagen remota de la nota [Mohamed, de Mägo de Oz: “Yo no canto, yo me expreso con el violín”](https://colmenaraldia.com/2025/08/29/mohamed-de-mago-de-oz-rock-colmenar/), con el crédito “Foto: Mohamed. Mägo de Oz”. La publicación no especifica una licencia de reutilización.
+
 ## Portadas
 
-Las portadas identifican los discos en este proyecto educativo no oficial. No se incluyen en la licencia del código de la página; pertenecen a sus respectivos titulares.
+Las portadas identifican los discos. No se incluyen en la licencia del código de la página; pertenecen a sus respectivos titulares.
 
 - `images/leyenda-de-la-mancha.jpg`: https://magodeozoficial.com/wp-content/uploads/2021/07/mago-de-oz_la-leyenda-de-la-mancha1.jpg
 - `images/finisterra.jpg`: https://magodeozoficial.com/wp-content/uploads/2020/05/finisterra-20-a.jpg
