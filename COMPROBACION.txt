@@ -1,0 +1,7 @@
+Comprobación de entrega — 5 de noviembre de 2026
+
+Correcto: compilación de producción y generación de Vista_previa.html.
+Correcto en DOM simulado: búsquedas por título y año, tildes y mayúsculas, estados sin resultados, favoritos, filtro, persistencia al recargar, almacenamiento bloqueado, menú y cierre con Escape, selección y apertura/cierre del reproductor.
+Correcto: imágenes y fuentes incrustadas, destinos internos y protección de enlaces externos.
+
+Límite: no se ha podido completar la revisión visual en un navegador real. El DOM simulado no valida el diseño responsive ni la reproducción real de YouTube. Spotify, YouTube y los enlaces oficiales necesitan internet.
